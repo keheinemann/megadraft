@@ -150,7 +150,10 @@ export default class Toolbar extends Component {
       this.arrowEl.style.left = "";
     }
     if (this.props.shouldDisplayToolbarFn()) {
-      return this.setBarPosition();
+      var self = this;
+      setTimeout(function() {
+      return self.setBarPosition();
+      }, 10);
     } else {
       if (this.state.show) {
         this.setState({
